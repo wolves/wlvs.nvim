@@ -18,7 +18,7 @@ function M.init()
 	require("WLVS.editor").init()
 	require("WLVS.completion").init()
 	require("WLVS.ui").init()
-	-- require 'wlvs.lsp'.init()
+	require("WLVS.lsp").init()
 end
 
 return M
