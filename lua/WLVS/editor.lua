@@ -14,6 +14,11 @@ function M.init()
 		},
 	})
 
+	require("treesj").setup({
+		use_default_keymaps = false,
+		max_join_length = 150,
+	})
+
 	require("colorizer").setup({
 		filetypes = { "*", "!lazy" },
 		buftype = { "*", "!prompt", "!nofile" },
