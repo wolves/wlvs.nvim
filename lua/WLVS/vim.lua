@@ -136,10 +136,16 @@ local function set_vim_keymaps()
 	vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", options)
 	vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", options)
 
+	-- Resize window using <ctrl> arrow keys
+	vim.keymap.set("n", "<S-Up>", "<cmd>resize +2<CR>", options)
+	vim.keymap.set("n", "<S-Down>", "<cmd>resize -2<CR>", options)
+	vim.keymap.set("n", "<S-Left>", "<cmd>vertical resize -2<CR>", options)
+	vim.keymap.set("n", "<S-Right>", "<cmd>vertical resize +2<CR>", options)
+
 	-- Clear search with <esc>
-	vim.keymap.set("", "<esc>", ":noh<esc>")
-	vim.keymap.set("n", "gw", "*N")
-	vim.keymap.set("x", "gw", "*N")
+	vim.keymap.set("", "<esc>", ":noh<esc>", options)
+	vim.keymap.set("n", "gw", "*N", options)
+	vim.keymap.set("x", "gw", "*N", options)
 end
 
 function M.init()
