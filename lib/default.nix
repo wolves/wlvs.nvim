@@ -139,9 +139,6 @@ in rec {
         packages.main = {inherit start;};
       };
       extraMakeWrapperArgs = ''--suffix PATH : "${lib.makeBinPath extraPackages}"'';
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
       withNodeJs = true;
       withPython3 = true;
       withRuby = true;
