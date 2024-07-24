@@ -76,12 +76,12 @@ function M.init()
 		keymaps.on_attach(client, buffer)
 	end)
 
-	-- diagnostics
-	for name, icon in pairs(require("WLVS.symbols").icons.diagnostics) do
-		name = "DiagnosticSign" .. name
-		vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
-	end
-	vim.diagnostic.config(opts.diagnostics)
+  -- diagnostics
+  for name, icon in pairs(require("WLVS.symbols").icons.diagnostics) do
+    name = "DiagnosticSign" .. name
+    vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
+  end
+  vim.diagnostic.config(opts.diagnostics)
 
 	local capabilities = vim.tbl_deep_extend(
 		"force",
