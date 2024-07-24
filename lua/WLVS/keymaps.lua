@@ -63,7 +63,7 @@ function M.init()
 		{ "<leader>sw", grep_word, desc = "Grep Current Word" },
 		{ "<leader>t", group = "+toggle" },
 		{ "<leader>tc", util.toggle_colors, desc = "Colorscheme Light/Dark" },
-		{ "<leader>tf", require("wlvs.lsp.format").toggle, desc = "Format on Save" },
+		{ "<leader>tf", require("WLVS.lsp.format").toggle, desc = "Format on Save" },
 		{
 			"<leader>tn",
 			function()
