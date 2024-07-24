@@ -5,7 +5,9 @@
 --   _/  _/  _/    _/        _/  _/          _/
 --    _/  _/      _/_/_/_/    _/      _/_/_/
 ------------------------------------------------------------------------------//
-local function init()
+local M = {}
+
+function M.init()
 	-- require("wlvs.vim").init()
 	-- require 'wlvs.autocmds'.init()
 	-- require 'wlvs.theme'.init()
@@ -20,6 +22,4 @@ local function init()
 	-- require 'wlvs.lsp'.init()
 end
 
-return {
-	init = init,
-}
+return M
