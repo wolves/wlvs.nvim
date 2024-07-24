@@ -16,7 +16,7 @@ function M.init()
 	require("WLVS.treesitter").init()
 	require("WLVS.mini").init()
 	require("WLVS.editor").init()
-	-- require 'wlvs.plugins.completion'.init()
+	require("WLVS.completion").init()
 	-- require 'wlvs.ui'.init()
 	-- require 'wlvs.lsp'.init()
 end
