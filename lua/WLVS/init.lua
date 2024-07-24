@@ -8,7 +8,7 @@
 local M = {}
 
 function M.init()
-	-- require("wlvs.vim").init()
+	require("WLVS.vim").init()
 	-- require 'wlvs.autocmds'.init()
 	-- require 'wlvs.theme'.init()
 	-- require 'wlvs.keymaps'.init()
