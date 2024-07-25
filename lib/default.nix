@@ -7,7 +7,7 @@ in rec {
     pkgs = legacyPackages.${system};
   in
     buildVimPlugin {
-      name = "WLVS";
+      name = "wlvs";
       postInstall = ''
         rm -rf $out/.envrc
         rm -rf $out/.gitignore
@@ -24,7 +24,7 @@ in rec {
   mkNeovimPlugins = {system}: let
     inherit (pkgs) vimPlugins;
     pkgs = legacyPackages.${system};
-    WLVS-nvim = mkVimPlugin {inherit system;};
+    wlvs-nvim = mkVimPlugin {inherit system;};
   in [
     # languages
     vimPlugins.nvim-lspconfig
@@ -87,7 +87,7 @@ in rec {
     vimPlugins.which-key-nvim
 
     # configuration
-    WLVS-nvim
+    wlvs-nvim
   ];
 
   mkExtraPackages = {system}: let
@@ -122,7 +122,7 @@ in rec {
 
   mkExtraConfig = ''
     lua << EOF
-      require 'WLVS'.init()
+      require 'wlvs'.init()
     EOF
   '';
 

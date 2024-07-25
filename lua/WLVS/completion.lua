@@ -37,7 +37,7 @@ function M.init()
 		updateevents = "TextChanged,TextChangedI",
 	})
 
-	for _, ft_path in ipairs(vim.api.nvim_get_runtime_file("lua/WLVS/snippets/*.lua", true)) do
+	for _, ft_path in ipairs(vim.api.nvim_get_runtime_file("lua/wlvs/snippets/*.lua", true)) do
 		loadfile(ft_path)()
 	end
 

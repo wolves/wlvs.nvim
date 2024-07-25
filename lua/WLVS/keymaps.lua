@@ -1,8 +1,8 @@
 local M = {}
 local util = require("util")
 
-grep_string_prompt = require("WLVS.telescope").grep_string_prompt
-grep_word = require("WLVS.telescope").grep_word
+grep_string_prompt = require("wlvs.telescope").grep_string_prompt
+grep_word = require("wlvs.telescope").grep_word
 
 function M.init()
 	local wk = require("which-key")
@@ -63,7 +63,7 @@ function M.init()
 		{ "<leader>sw", grep_word, desc = "Grep Current Word" },
 		{ "<leader>t", group = "+toggle" },
 		{ "<leader>tc", util.toggle_colors, desc = "Colorscheme Light/Dark" },
-		{ "<leader>tf", require("WLVS.lsp.format").toggle, desc = "Format on Save" },
+		{ "<leader>tf", require("wlvs.lsp.format").toggle, desc = "Format on Save" },
 		{
 			"<leader>tn",
 			function()

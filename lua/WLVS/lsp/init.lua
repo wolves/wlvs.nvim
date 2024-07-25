@@ -1,8 +1,8 @@
 local M = {}
 
 local lspconfig = require("lspconfig")
-local servers = require("WLVS.lsp.servers")
-local keymaps = require("WLVS.lsp.keymaps")
+local servers = require("wlvs.lsp.servers")
+local keymaps = require("wlvs.lsp.keymaps")
 
 local rust_tools = require("rust-tools")
 
@@ -46,7 +46,7 @@ local opts = {
 }
 
 function M.init()
-	require("WLVS.lsp.format").setup(opts)
+	require("wlvs.lsp.format").setup(opts)
 
 	-- Rust specific setup
 	rust_tools.setup({
@@ -76,12 +76,12 @@ function M.init()
 		keymaps.on_attach(client, buffer)
 	end)
 
-  -- diagnostics
-  for name, icon in pairs(require("WLVS.symbols").icons.diagnostics) do
-    name = "DiagnosticSign" .. name
-    vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
-  end
-  vim.diagnostic.config(opts.diagnostics)
+	-- diagnostics
+	for name, icon in pairs(require("wlvs.symbols").icons.diagnostics) do
+		name = "DiagnosticSign" .. name
+		vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
+	end
+	vim.diagnostic.config(opts.diagnostics)
 
 	local capabilities = vim.tbl_deep_extend(
 		"force",

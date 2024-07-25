@@ -1,1 +1,1 @@
-require("WLVS").init()
+require("wlvs").init()
