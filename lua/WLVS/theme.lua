@@ -11,18 +11,10 @@ function M.init()
 		keywordStyle = { italic = true },
 		statementStyle = { bold = true },
 		typeStyle = {},
-		-- variablebuiltinStyle = { italic = true },
-		-- specialReturn = true, -- special highlight for the return keyword
-		-- specialException = true, -- special highlight for exception handling keywords
 		transparent = false, -- do not set background color
 		dimInactive = true,
 		globalStatus = true,
 		colors = {},
-		-- overrides = function(colors)
-		--   return {
-		--     CursorLine = { bg = colors.palette.winterBlue },
-		--   }
-		-- end,
 		theme = "wave",
 		background = {
 			dark = "wave",
