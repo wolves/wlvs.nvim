@@ -33,11 +33,12 @@ in rec {
     vimPlugins.rust-tools-nvim
 
     # completion
-    vimPlugins.nvim-cmp
-    vimPlugins.cmp-nvim-lsp
-    vimPlugins.cmp-buffer
-    vimPlugins.cmp-path
-    vimPlugins.cmp_luasnip
+    vimPlugins.blink-cmp
+    # vimPlugins.nvim-cmp
+    # vimPlugins.cmp-nvim-lsp
+    # vimPlugins.cmp-buffer
+    # vimPlugins.cmp-path
+    # vimPlugins.cmp_luasnip
 
     # snippets
     vimPlugins.luasnip
