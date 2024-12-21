@@ -6,7 +6,7 @@ function M.init()
 
   -- local cmp = require("cmp")
   -- local ls = require("luasnip")
-  require("blink.cmp").config {
+  require("blink.cmp").setup({
     keymap = {
       preset = "default",
       ["<C-k>"] = { "show", "show_documentation", "hide_documentation", "fallback" },
@@ -26,7 +26,7 @@ function M.init()
     },
 
     signature = { enabled = true },
-  }
+  })
 
   -- cmp.setup({
   -- 	sources = {

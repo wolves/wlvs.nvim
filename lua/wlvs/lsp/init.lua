@@ -88,9 +88,9 @@ function M.init()
     "force",
     {},
     vim.lsp.protocol.make_client_capabilities(),
-    require("blink.cmp").get_lsp_capabilities(),
+    require("blink.cmp").get_lsp_capabilities()
   )
-
+  
   -- Initialize servers
   for server, server_config in pairs(servers) do
     -- local config = { on_attach = on_attach }
